@@ -33,7 +33,7 @@ In this mode, the tool need a input data with the following format:<br/>
 This mode returns a csv file with the records of type "foo" that refer to a given "bar" type,  in a given period.
 The output file is in the "outputs" folder, with the next file format:
 ```
-batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp in AAAMMDDHHMMSS>.csv
+batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp AAAMMDDHHMMSS>.csv
 ```
 
 <br/>When you launch this mode it´s mandatory introduce four arguments.
