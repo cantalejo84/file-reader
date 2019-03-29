@@ -18,23 +18,24 @@ def stream_checker(filename, host_proc1, host_proc2):
 
         output_file_proc1 = 'stream_out_proc1_' + host_proc1 + '_' + now + '.csv'
         output_path_proc1 = output_folder + '/' + output_file_proc1
-        f_out = open(output_path_proc1, 'w')
-        f_out.close()
+        f_out_1 = open(output_path_proc1, 'w')
+        f_out_1.close()
 
         output_file_proc2 = 'stream_out_proc2_' + host_proc2 + '_' + now + '.csv'
         output_path_proc2 = output_folder + '/' + output_file_proc2
-        f_out = open(output_path_proc2, 'w')
-        f_out.close()
+        f_out_2 = open(output_path_proc2, 'w')
+        f_out_2.close()
 
         output_file_proc3 = 'stream_out_proc3_' + now + '.csv'
         output_path_proc3 = output_folder + '/' + output_file_proc3
-        f_out = open(output_path_proc3, 'w')
-        f_out.close()
+        f_out_3 = open(output_path_proc3, 'w')
+        f_out_3.close()
 
         file.seek(where)
         line = file.readline()
         flag_csv_1 = True
         flag_csv_2 = True
+        print("fin")
         while line:
             line_list = list(line.strip().split(" "))
             host_origin = line_list[1]

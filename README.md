@@ -55,7 +55,7 @@ error_batch_out_<unix_init_time>_<uniz_end_time>_<host_introduced>_<timestamp AA
 
 ## Streaming mode
 
-In this mode the tool need a input data format like batch mode. This mode returns three file ouputs, every hour (config with 1 minute for test) 
+In this mode the tool need a input data format like batch mode. This mode returns three file ouputs, every hour (config with 2 minute for test) 
 + (PROC1)Output csv file with the records of type "foo" that refer to a given "bar" (configurable) type, during the last hour.<br/>  
 File format:<br/> 
 ```
@@ -105,7 +105,7 @@ For example:
 ```
 # Indicative proposal:
 f=open('~/file-reader/test/input-file-10000.txt','a')
-f.write('\n1565733598999 alberto cantalejo')
+f.write('\n1565733598999 alberto Sanjaya')
 f.close
 
 ```
