@@ -75,7 +75,7 @@ stream_out_proc3_<timestamp AAAMMDDHHMMSS>.csv
 ```
 
 When you launch this mode is mandatory introduce three arguments.
-+ <path_data_input>: file path, we recommend saving the input data in the folder 'resources' inside file-reader
++ <path_data_input>: file path, it is recommend saving the input data in the folder 'resources' inside file-reader
 + \<hostname1>: For PROC1 outputs
 + \<hostname2>: For PROC2 outputs
 
@@ -100,7 +100,7 @@ python3 batch_checker.py test/input-file-10000.txt 1565654627030 1565666186976 S
 # Inside the file-reader folder
 python3 stream_checker.py test/input-file-10000.txt Sanjaya Manar
 ```
-IMPORTANT: The streaming mode never end, it runs continuously. For check the process of new data you can append data to input file with other open console.<br/>
+IMPORTANT: The streaming mode never end, it runs continuously. For check the process of new data you can append data to input file with other open console. (to terminate Ctrl+C)<br/>
 For example:
 ```
 # Indicative proposal:
@@ -113,4 +113,6 @@ f.close
 ##  Performance considerations
 
 
-This tool is robust and resilient, the goal is optimize memory and cpu. It has been designed to work with very large input data, for this reason, unfortunately the processing time is penalized. 
+This tool is robust and resilient, the goal is optimize memory and cpu, for this, i try to store the minimum possible data in memory, in order to avoid memory overflow. It has been designed to work with very large input data, for this reason, unfortunately the processing time is penalized.<br/>
+
+Enjoy! and Happy coding :-) 
