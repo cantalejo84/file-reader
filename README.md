@@ -50,7 +50,7 @@ batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp AAAMMDDH
 
 If any of the records of the input data is not correct, the tool will not stop de process, instead, it will create a new error file with the wrong records, withe the following format (in the outputs folder):
 ```
-error_batch_out_<unix_init_time>_<uniz_end_time>_<host_introduced>_<timestamp AAAMMDDHHMMSS>.csv
+error_batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp AAAMMDDHHMMSS>.csv
 ```
 
 ## Streaming mode
