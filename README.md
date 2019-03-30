@@ -68,7 +68,7 @@ File format:<br/>
 stream_out_proc2_<host_introduced>_<timestamp AAAMMDDHHMMSS>.csv
 ```
 
-+ (PROC3)Output file with "bar" type (separated by semicolons) that generate most references, during the last hour.<br/>
++ (PROC3)Output csv file with "bar" type that generate most references, during the last hour.<br/>
 File Format:<br/>
 ```
 stream_out_proc3_<timestamp AAAMMDDHHMMSS>.csv
@@ -114,5 +114,8 @@ f.close
 
 
 This tool is robust and resilient, the goal is optimize memory and cpu, for this, i try to store the minimum possible data in memory, in order to avoid memory overflow. It has been designed to work with very large input data, for this reason, unfortunately the processing time is penalized.<br/>
+
+**Improvement points:**<br/>
+I should improve in the "Streaming Mode" the perfomance of PROC3 process, in order to use less memory and gain speed.
 
 Enjoy! and Happy coding :-) 
