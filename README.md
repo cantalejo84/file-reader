@@ -82,7 +82,7 @@ When you launch this mode is mandatory introduce three arguments.
 
 **Execution example:**
 
-`python3 file-reader/stream_checker.py file-reader/resources/input.txt 1111 1113 Rehgan`
+`python3 stream_checker.py test/input-file-10000.txt Sanjaya Manar`
 
 ##  Test
 
