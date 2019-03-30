@@ -37,14 +37,14 @@ batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp AAAMMDDH
 ```
 
 <br/>When you launch this mode it´s mandatory introduce four arguments.
-+ <path_data_input>: file path, we recommend saving the input data in the folder 'resources' inside file-reader
++ <path_data_input>: file path, we recommend saving the input data in a folder inside file-reader
 + <unix_init_time>: Period init
 + <unix_end_time>: Period end
 + \<bar> field type
 
 **Execution example:**
 
-`python3 file-reader/checker.py file-reader/resources/input.txt 1111 1113 Rehgan`
+`python3 batch_checker.py test/input-file-10000.txt 1565654627030 1565666186976 Sanjaya`
 
 **Data input errors treatment:<br/>**
 
@@ -75,7 +75,7 @@ stream_out_proc3_<timestamp AAAMMDDHHMMSS>.csv
 ```
 
 When you launch this mode is mandatory introduce three arguments.
-+ <path_data_input>: file path, it is recommend saving the input data in the folder 'resources' inside file-reader
++ <path_data_input>: file path, it is recommend saving the input data in a folder inside file-reader.
 + \<hostname1>: For PROC1 outputs
 + \<hostname2>: For PROC2 outputs
 
@@ -86,7 +86,7 @@ When you launch this mode is mandatory introduce three arguments.
 
 ##  Test
 
-For test the tool, exists a example data in the resources folder.(outputs in "resources folder"")<br/>
+For test the tool, exists a example data in the "test" folder. (outputs in "outputs" folder)<br/>
 Example:<br/>
 
 **Test Batch mode:**
@@ -116,6 +116,7 @@ f.close
 This tool is robust and resilient, the goal is optimize memory and cpu, for this, i try to store the minimum possible data in memory, in order to avoid memory overflow. It has been designed to work with very large input data, for this reason, unfortunately the processing time is penalized.<br/>
 
 **Improvement points:**<br/>
-I should improve in the "Streaming Mode" the perfomance of PROC3 process, in order to use less memory and gain speed.
+I should improve in the "Streaming Mode" the perfomance of PROC3 process, in order to use less memory and gain speed.<br/>
+For example:
 
 Enjoy! and Happy coding :-) 
