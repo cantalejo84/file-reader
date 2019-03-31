@@ -55,8 +55,19 @@ error_batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp AA
 
 ## Streaming mode
 
-In this mode the tool is continuously reading the input file (input data format like batch mode), every hour processes the new records that have arrived at that time and returns three files with the following data (only with new records, **not** from the beginning of the file.):<br/>
+In this mode the tool is continuously reading the input file (input data format like batch mode), every hour (for test the tool has 1 min config) processes the new records that have arrived at that time and returns three files with the following data (only with new records, **not** from the beginning of the file.):<br/>
 In summary, the tool is processing the information that arrives in a time windows.<br/>
+
+
+The tool to inform about its execution shows in console the number of executions made and the time of each processing.
+<br/>Example
+```
+>>>>>>>>>>>> Counter: 1 Time: 2019-03-31 15:28:05 <<<<<<<<<<<<
+10000 processed files
+>>>>>>>>>>>> Counter: 2 Time: 2019-03-31 15:29:11 <<<<<<<<<<<<
+0 processed files
+
+```
 
 Outputs:  
 + (PROC1)Output csv file with the records of type "foo" that refer to a given "bar" (configurable) type, during the last hour.<br/>  

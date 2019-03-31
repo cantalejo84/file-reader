@@ -9,11 +9,15 @@ def stream_checker(filename, host_proc1, host_proc2):
 
     file = open(filename, 'r')
     where = file.tell()
+    cont=0
 
     while 1:
         dict_counter = []
         host = ''
         now = datetime.now().strftime("%Y%m%d%H%M%S")
+        now2 = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        cont += 1
+        print('>>>>>>>>>>>> Counter: {0} Time: {1} <<<<<<<<<<<<'.format(str(cont), now2))
         output_folder = 'outputs'
 
         output_file_proc1 = 'stream_out_proc1_' + host_proc1 + '_' + now + '.csv'
@@ -35,7 +39,9 @@ def stream_checker(filename, host_proc1, host_proc2):
         line = file.readline()
         flag_csv_1 = True
         flag_csv_2 = True
+        n_lines = 0
         while line:
+            n_lines += 1
             line_list = list(line.strip().split(" "))
             host_origin = line_list[1]
             host_dest = line_list[2]
@@ -63,6 +69,8 @@ def stream_checker(filename, host_proc1, host_proc2):
 
             line = file.readline()
             where = file.tell()+1
+
+        print('{} processed records'.format(str(n_lines)))
 
         with open(output_path_proc3, 'a') as f3:
             f3.write(host)
