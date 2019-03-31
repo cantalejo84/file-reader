@@ -59,13 +59,13 @@ In this mode the tool is continuously reading the input file (input data format 
 In summary, the tool is processing the information that arrives in a time windows.<br/>
 
 
-The tool to inform about its execution shows in console the number of executions made and the time of each processing.
+The tool to inform about its execution shows in console the number of executions made, the time of each processing and the records processed.
 <br/>Example
 ```
 >>>>>>>>>>>> Counter: 1 Time: 2019-03-31 15:28:05 <<<<<<<<<<<<
-10000 processed files
+10000 processed records
 >>>>>>>>>>>> Counter: 2 Time: 2019-03-31 15:29:11 <<<<<<<<<<<<
-0 processed files
+0 processed records
 
 ```
 
