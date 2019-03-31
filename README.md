@@ -55,7 +55,10 @@ error_batch_out_<unix_init_time>_<unix_end_time>_<host_introduced>_<timestamp AA
 
 ## Streaming mode
 
-In this mode the tool need a input data format like batch mode. This mode returns three file ouputs, every hour (config with 2 minute for test) 
+In this mode the tool is continuously reading the input file (input data format like batch mode), every hour processes the new records that have arrived at that time and returns three files with the following data (only with new records, **not** from the beginning of the file.):<br/>
+In summary, the tool is processing the information that arrives in a time windows.<br/>
+
+Outputs:  
 + (PROC1)Output csv file with the records of type "foo" that refer to a given "bar" (configurable) type, during the last hour.<br/>  
 File format:<br/> 
 ```
