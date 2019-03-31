@@ -35,7 +35,6 @@ def stream_checker(filename, host_proc1, host_proc2):
         line = file.readline()
         flag_csv_1 = True
         flag_csv_2 = True
-        print("fin")
         while line:
             line_list = list(line.strip().split(" "))
             host_origin = line_list[1]
